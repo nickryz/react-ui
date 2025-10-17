@@ -1,0 +1,42 @@
+@import "./fonts.css";
+@import "./utility.css";
+@import "tailwindcss";
+
+:root {
+  --vh: calc(100vh / 100);
+
+  /* Sizes */
+  --grid-space: calc((100% - 11 * var(--grid-gap)) / 12);
+  --grid-gap: 2vw;
+  --base-padding-x: max(5vw, 40px);
+  --base-padding-y: clamp(30px, 4vw, 50px);
+  --cross-size: clamp(0.875rem, 1vw, 2rem);
+
+  /* Colors */
+  --color-gray-blue: #2b2e3a;
+  --color-light-gray: #e4e6ef;
+  --color-accent-blue: #0d299a;
+}
+
+@theme {
+  --font-sans: "Roboto", sans-serif;
+
+  --min-vw: 320px;
+  --max-vw: 1920px;
+
+  --color-gray-blue: var(--color-gray-blue);
+  --color-light-gray: var(--color-light-gray);
+  --color-accent-blue: var(--color-accent-blue);
+}
+
+.h-full-screen {
+  height: calc(var(--vh) * 100);
+}
+
+.section {
+  @apply fluid-px-3/22 fluid-py-6/12;
+}
+
+.main-grid {
+  @apply grid grid-cols-12 gap-x-[2vw];
+}

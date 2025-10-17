@@ -1,0 +1,253 @@
+@utility fluid-text-* {
+  font-size: clamp(
+    --value(--text-*),
+    calc(
+      --value(--text-*) + (--modifier(--text-*) - --value(--text-*)) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --modifier(--text-*)
+  );
+}
+
+/* HEIGHT */
+
+@utility fluid-h-* {
+  height: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+/* PADDING */
+
+@utility fluid-pl-* {
+  padding-left: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-pr-* {
+  padding-right: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-pt-* {
+  padding-top: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-pb-* {
+  padding-bottom: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-p-* {
+  padding: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-px-* {
+  --fluid-px: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+
+  padding-left: var(--fluid-px);
+  padding-right: var(--fluid-px);
+}
+
+@utility fluid-py-* {
+  --fluid-py: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+  padding-top: var(--fluid-py);
+  padding-bottom: var(--fluid-py);
+}
+
+/* MARGIN */
+
+@utility fluid-ml-* {
+  margin-left: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-mr-* {
+  margin-right: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-mt-* {
+  margin-top: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-mb-* {
+  margin-bottom: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-m-* {
+  margin: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+}
+
+@utility fluid-mx-* {
+  --margin-mx: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+  margin-left: var(--margin-mx);
+  margin-right: var(--margin-mx);
+}
+
+@utility fluid-my-* {
+  --margin-my: clamp(
+    --spacing(--value(integer)),
+    calc(
+      --spacing(--value(integer)) +
+        (--spacing(--modifier(integer)) - --spacing(--value(integer))) *
+        (
+          (100vw - var(--min-vw, 320px)) /
+            (var(--max-vw, 1920px) - var(--min-vw, 320px))
+        )
+    ),
+    --spacing(--modifier(integer))
+  );
+  margin-top: var(--margin-my);
+  margin-bottom: var(--margin-my);
+}
