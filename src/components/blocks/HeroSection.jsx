@@ -1,15 +1,14 @@
-import { useLenis } from "lenis/react";
+import TestScene from "@/components/canvas/TestScene.jsx";
+import TvScreen from "@/components/canvas/TvScreen/TvScreen.jsx";
 
 const HeroSection = () => {
-  const lenis = useLenis();
-
   return (
     <section className="section main-grid grid-rows-[auto_1fr_auto] h-full-screen">
       <h1 className="col-start-3 col-span-6 fluid-text-sm/5xl leading-none font-light">
         We help brands create digital experiences that connect with their
         audience
       </h1>
-      <div className="col-span-full bg-amber-300 rounded-2xl fluid-mt-5/12"></div>
+      <TvScreen />
       <div className="col-span-full relative ">
         <div className="absolute left-0 top-0 fluid-h-6/12 w-full fluid-text-xs/2xl flex items-center justify-between gap-0.5 leading-none">
           {Array(4)
@@ -21,10 +20,7 @@ const HeroSection = () => {
                 </span>
               );
             })}
-          <button
-            onClick={() => lenis?.scrollTo(0)}
-            className="block absolute uppercase fluid-text-xs/sm left-1/2 top-1/2 -translate-1/2 z-10 leading-none cursor-pointer"
-          >
+          <button className="block absolute uppercase fluid-text-xs/sm left-1/2 top-1/2 -translate-1/2 z-10 leading-none cursor-pointer">
             Scroll to explore
           </button>
         </div>

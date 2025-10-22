@@ -31,6 +31,36 @@
 
 /* PADDING */
 
+@utility col-pl-* {
+  padding-left: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-pr-* {
+  padding-right: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-pt-* {
+  padding-top: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-pb-* {
+  padding-bottom: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-p-* {
+  padding: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-px-* {
+  padding-left: calc((100% / 12 + 2vw / 11) * --value(integer));
+  padding-right: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-py-* {
+  padding-top: calc((100% / 12 + 2vw / 11) * --value(integer));
+  padding-bottom: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
 @utility fluid-pl-* {
   padding-left: clamp(
     --spacing(--value(integer)),
@@ -142,6 +172,36 @@
 }
 
 /* MARGIN */
+
+@utility col-ml-* {
+  margin-left: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-mr-* {
+  margin-right: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-mt-* {
+  margin-top: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-mb-* {
+  margin-bottom: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-m-* {
+  margin: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-mx-* {
+  margin-left: calc((100% / 12 + 2vw / 11) * --value(integer));
+  margin-right: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
+
+@utility col-my-* {
+  margin-top: calc((100% / 12 + 2vw / 11) * --value(integer));
+  margin-bottom: calc((100% / 12 + 2vw / 11) * --value(integer));
+}
 
 @utility fluid-ml-* {
   margin-left: clamp(

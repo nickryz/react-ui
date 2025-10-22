@@ -6,8 +6,9 @@
   --vh: calc(100vh / 100);
 
   /* Sizes */
-  --grid-space: calc((100% - 11 * var(--grid-gap)) / 12);
   --grid-gap: 2vw;
+  --grid-columns: 12;
+  --grid-space: calc((100% - 11 * var(--grid-gap)) / 12);
   --base-padding-x: max(5vw, 40px);
   --base-padding-y: clamp(30px, 4vw, 50px);
   --cross-size: clamp(0.875rem, 1vw, 2rem);
@@ -27,16 +28,21 @@
   --color-gray-blue: var(--color-gray-blue);
   --color-light-gray: var(--color-light-gray);
   --color-accent-blue: var(--color-accent-blue);
+
+  --text-10xl: 10rem;
+  --text-11xl: 12rem;
 }
 
-.h-full-screen {
-  height: calc(var(--vh) * 100);
-}
+@layer base {
+  .section {
+    @apply fluid-px-3/22 fluid-py-6/12;
+  }
 
-.section {
-  @apply fluid-px-3/22 fluid-py-6/12;
-}
+  .h-full-screen {
+    height: calc(var(--vh) * 100);
+  }
 
-.main-grid {
-  @apply grid grid-cols-12 gap-x-[2vw];
+  .main-grid {
+    @apply grid grid-cols-12 gap-x-[var(--grid-gap)];
+  }
 }
