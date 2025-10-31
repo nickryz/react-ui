@@ -1,11 +1,11 @@
 import ArrowThinSvg from "@/components/atoms/ArrowThinSvg.jsx";
 import ButtonBase from "@/components/elements/ButtonBase.jsx";
 
-const ButtonWithArrow = ({ children, href }) => {
+const ButtonWithArrow = ({ children, ...props }) => {
   return (
     <ButtonBase
-      href={href}
       className="group/btn bg-gray-blue hover:bg-accent-blue text-white pl-[1.625em]"
+      {...props}
     >
       <div className="flex items-center justify-center gap-[0.5em] leading-none">
         <span className="group-hover/btn:translate-x-0 group-hover/btn:opacity-100 block absolute left-[1em] size-[1em] transition -translate-x-[calc(100%+2em)] duration-300 opacity-0">

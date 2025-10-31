@@ -1,12 +1,14 @@
 import { GlobalCanvas } from "@14islands/r3f-scroll-rig";
-import { AdaptiveDpr, OrbitControls } from "@react-three/drei";
+import { AdaptiveDpr, Environment, OrbitControls } from "@react-three/drei";
 import GSAPLoopSync from "@/utils/GSAPLoopSync.js";
+import { Stats } from "@react-three/drei";
 
-const CanvasScreen = () => {
+const CanvasScreen = ({ ref }) => {
   return (
     <>
       <GlobalCanvas
-        style={{ zIndex: 0 }}
+        ref={ref}
+        style={{ zIndex: -1 }}
         dpr={[1, 1.5]}
         gl={{ antialias: false }}
         flat
@@ -14,11 +16,10 @@ const CanvasScreen = () => {
         {/*Services*/}
         <AdaptiveDpr pixelated />
         <GSAPLoopSync />
+        <Stats />
         {/*<OrbitControls enableZoom={false} enableDamping={true} />*/}
-
         {/*WORLD*/}
-        {/*<color attach="background" args={["black"]} />*/}
-        <ambientLight colorWrite depthWrite />
+        <ambientLight colorWrite depthWrite intensity={2.5} />
       </GlobalCanvas>
     </>
   );

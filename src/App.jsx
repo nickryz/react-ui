@@ -1,20 +1,20 @@
 import useVh from "@/utils/useVh.js";
 import MainHeader from "@/components/app/MainHeader.jsx";
-import { Outlet } from "react-router";
 import CanvasScreen from "@/components/app/CanvasScreen.jsx";
-import { GlobalCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig";
-import TestScene from "@/components/canvas/TestScene.jsx";
+import AnimatedOutlet from "@/components/app/AnimatedOutlet.jsx";
+import { SmoothScrollbar } from "@14islands/r3f-scroll-rig";
+import React from "react";
 
 function App() {
   useVh();
 
   return (
     <>
-      <SmoothScrollbar />
       <CanvasScreen />
+      <SmoothScrollbar />
       <MainHeader className="fixed w-full top-0 left-0" />
       <main>
-        <Outlet />
+        <AnimatedOutlet />
       </main>
     </>
   );

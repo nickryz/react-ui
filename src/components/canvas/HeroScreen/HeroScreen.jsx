@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { ScrollScene, UseCanvas } from "@14islands/r3f-scroll-rig";
-import TvScreenWebGL from "@/components/canvas/TvScreen/TvScreenWebGL.jsx";
+import HeroScreenWebGL from "@/components/canvas/HeroScreen/HeroScreenWebGL.jsx";
 
-const TvScreen = () => {
+const HeroScreen = () => {
   const el = useRef(null);
 
   return (
@@ -10,11 +10,11 @@ const TvScreen = () => {
       <div ref={el} className="col-span-full fluid-mt-5/12" />
       <UseCanvas>
         <ScrollScene track={el}>
-          {(props) => <TvScreenWebGL {...props} />}
+          {(props) => <HeroScreenWebGL {...props} />}
         </ScrollScene>
       </UseCanvas>
     </>
   );
 };
 
-export default TvScreen;
+export default HeroScreen;

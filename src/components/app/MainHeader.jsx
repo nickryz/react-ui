@@ -47,12 +47,10 @@ const MainHeader = ({ className }) => {
       >
         LOGO
       </Link>
-      <Link to="/about" className="pointer-events-auto">
-        About
-      </Link>
+
       <div className="pointer-events-auto ml-10 flex gap-[1em] fluid-pl-4/10">
-        <ButtonWithArrow>LET'S TALK</ButtonWithArrow>
-        <ButtonWithDots>MENU</ButtonWithDots>
+        <ButtonWithArrow to="/about">LET'S TALK</ButtonWithArrow>
+        <ButtonWithDots to="/">MENU</ButtonWithDots>
       </div>
     </header>
   );

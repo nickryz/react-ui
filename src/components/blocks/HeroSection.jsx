@@ -1,5 +1,4 @@
-import TestScene from "@/components/canvas/TestScene.jsx";
-import TvScreen from "@/components/canvas/TvScreen/TvScreen.jsx";
+import HeroScreen from "@/components/canvas/HeroScreen/HeroScreen.jsx";
 
 const HeroSection = () => {
   return (
@@ -8,7 +7,7 @@ const HeroSection = () => {
         We help brands create digital experiences that connect with their
         audience
       </h1>
-      <TvScreen />
+      <HeroScreen />
       <div className="col-span-full relative ">
         <div className="absolute left-0 top-0 fluid-h-6/12 w-full fluid-text-xs/2xl flex items-center justify-between gap-0.5 leading-none">
           {Array(4)

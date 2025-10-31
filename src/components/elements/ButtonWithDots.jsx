@@ -1,9 +1,9 @@
 import ButtonBase from "@/components/elements/ButtonBase.jsx";
 
-const ButtonWithDots = ({ children, href }) => {
+const ButtonWithDots = ({ children, ...props }) => {
   return (
     <ButtonBase
-      href={href}
+      {...props}
       className="group/btn pl-[1.625em] bg-light-gray hover:bg-light-gray/50 text-gray-blue"
     >
       <div className="flex items-center justify-center gap-[0.5em] leading-none">

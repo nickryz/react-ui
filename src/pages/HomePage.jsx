@@ -1,6 +1,5 @@
 import HeroSection from "@/components/blocks/HeroSection.jsx";
 import RealsSection from "@/components/blocks/RealsSection.jsx";
-import CanvasScreen from "@/components/app/CanvasScreen.jsx";
 
 const HomePage = () => {
   return (
